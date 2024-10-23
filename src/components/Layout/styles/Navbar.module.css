@@ -1,5 +1,25 @@
 .header {
-  transition: background-color 0.5s ease, height 0.3s ease;
+  transition: background-color 0.5s ease, height 0.3s ease, opacity 0.3s ease,
+    transform 0.3s ease;
+  height: 80px;
+  position: relative;
+  background: var(--white);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  opacity: 1;
+  z-index: 10;
+  transform: translateY(0);
+  border-top: 1px solid #f4f4f4;
+}
+
+.headerScrolled {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.5s ease, height 0.3s ease, opacity 0.3s ease,
+    transform 0.3s ease;
   height: 60px;
   position: fixed;
   background: var(--white);
@@ -9,7 +29,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px;
+  padding: 20px;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .navbar {
@@ -17,12 +39,14 @@
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
+  z-index: 9999;
 }
 
 .navbarLinks {
   display: flex;
   gap: 50px;
   opacity: 1;
+  z-index: 9999;
   transition: opacity 0.5s ease-in-out;
 }
 
@@ -32,6 +56,11 @@
 }
 
 .navbarLink {
+  font-weight: 500;
+  font-size: 15px;
+  height: 40px;
+  line-height: 40px;
+  text-transform: capitalize;
   color: var(--primary-black);
   text-decoration: none;
   transition: color 0.3s ease;
@@ -39,7 +68,7 @@
 
 .navbarLink:hover,
 .navbarLink.active {
-  color: #4070f4;
+  color: var(--main-color);
 }
 
 .logo img {
@@ -81,22 +110,36 @@
 @media (max-width: 768px) {
   .navbarLinks {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: 55px;
     left: 0;
     right: 0;
     background: var(--white);
-    padding: 10px 0;
+    padding: 0px 20px;
     opacity: 0;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15);
     visibility: hidden;
   }
 
+  .navbarLinks li:nth-child(1) {
+    padding-top: 25px;
+  }
+  .navbarLinks li {
+    border-bottom: 1px solid #f4f4f4;
+    width: 100%;
+  }
+
   .navbar {
+    display: flex;
     justify-content: space-between;
   }
 
   .navbarLinks.show {
+    z-index: 9999;
+
     opacity: 1;
     visibility: visible;
   }

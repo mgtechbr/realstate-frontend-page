@@ -1,6 +1,8 @@
 :root {
   --primary-black: #1e1e1e;
+  --grey: #88848d;
   --white: #ffffff;
+  --main-color: #fe5525;
 }
 
 * {

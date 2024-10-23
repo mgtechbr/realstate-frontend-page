@@ -5,7 +5,7 @@ Siga estas etapas para configurar o projeto localmente:
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   git clone https://github.com/mgtechbr/realstate-frontend-page.git
    ```
 
 2. Entre na pasta do projeto e instale as dependências:

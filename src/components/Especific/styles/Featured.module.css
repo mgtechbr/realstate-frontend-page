@@ -1,0 +1,141 @@
+.featuredSection {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.colLg5 {
+  margin: 0 40px;
+}
+.colLg4,
+.colLg5,
+.colLg3 {
+  flex: 0 0 calc(33.3333%);
+  min-width: calc(33.3333%);
+}
+
+.leftImage {
+  position: relative;
+}
+
+.leftImage img {
+  width: 100%;
+  height: auto;
+}
+
+.sectionHeading {
+  padding-bottom: 40px;
+}
+
+.sectionHeading h6 {
+  color: var(--main-color);
+  font-size: 15px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.sectionHeading h2 {
+  font-size: 40px;
+  color: var(--primary-dark);
+}
+
+.infoTable {
+  width: 80%;
+}
+.infoTable ul {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.infoTable li {
+  display: flex;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.infoTable img {
+  object-fit: cover;
+  margin-right: 30px;
+}
+
+.infoTable h4 {
+  font-size: 22px;
+  font-weight: 550;
+  color: var(--primary-dark);
+}
+
+.infoTable span {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--secondary-grey);
+}
+
+.dropdownItem {
+  padding: 15px;
+}
+.dropdownContainer {
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  background-color: #faf5f1;
+}
+
+.dropdownButton {
+  background-color: transparent;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--primary-dark);
+  transition: color 0.3s ease;
+  border: none;
+}
+
+.dropdownItem:nth-child(2) {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+.dropdownItem button.active {
+  color: var(--main-color);
+}
+
+.dropdownContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease-in-out, opacity 0.5s ease;
+  opacity: 0;
+}
+
+.dropdownContent.open {
+  max-height: 500px;
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .infoTable {
+    width: 100%;
+  }
+  .colLg5 {
+    margin: 40px;
+  }
+}

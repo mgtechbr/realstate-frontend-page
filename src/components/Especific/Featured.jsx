@@ -31,54 +31,66 @@ const Featured = () => {
               <h6>| Destaque</h6>
               <h2>Melhores imovéis &amp; Favoritos</h2>
             </div>
-            <div>
+            <div className={styles.dropdownContainer}>
               <div className={styles.dropdownItem}>
                 <button
                   onClick={() => toggleDropdown(1)}
-                  className={styles.dropdownButton}
+                  className={`${styles.dropdownButton} ${
+                    activeDropdown === 1 ? styles.active : ""
+                  }`}
                 >
                   Sobre nossas propriedades
                 </button>
-                {activeDropdown === 1 && (
-                  <div className={styles.dropdownContent}>
-                    Dolor <strong>almesit amet</strong>, consectetur adipiscing
-                    elit, sed doesn&apos;t eiusmod tempor incididunt ut labore
-                    consectetur elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.
-                  </div>
-                )}
+                <div
+                  className={`${styles.dropdownContent} ${
+                    activeDropdown === 1 ? styles.open : ""
+                  }`}
+                >
+                  Dolor <strong>almesit amet</strong>, consectetur adipiscing
+                  elit, sed doesn&apos;t eiusmod tempor incididunt ut labore
+                  consectetur elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua.
+                </div>
               </div>
               <div className={styles.dropdownItem}>
                 <button
                   onClick={() => toggleDropdown(2)}
-                  className={styles.dropdownButton}
+                  className={`${styles.dropdownButton} ${
+                    activeDropdown === 2 ? styles.active : ""
+                  }`}
                 >
                   Como trabalhamos?
                 </button>
-                {activeDropdown === 2 && (
-                  <div className={styles.dropdownContent}>
-                    Dolor <strong>almesit amet</strong>, consectetur adipiscing
-                    elit, sed doesn&apos;t eiusmod tempor incididunt ut labore
-                    consectetur elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.
-                  </div>
-                )}
+                <div
+                  className={`${styles.dropdownContent} ${
+                    activeDropdown === 2 ? styles.open : ""
+                  }`}
+                >
+                  Dolor <strong>almesit amet</strong>, consectetur adipiscing
+                  elit, sed doesn&apos;t eiusmod tempor incididunt ut labore
+                  consectetur elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua.
+                </div>
               </div>
               <div className={styles.dropdownItem}>
                 <button
                   onClick={() => toggleDropdown(3)}
-                  className={styles.dropdownButton}
+                  className={`${styles.dropdownButton} ${
+                    activeDropdown === 3 ? styles.active : ""
+                  }`}
                 >
                   Por que nós somos destaque?
                 </button>
-                {activeDropdown === 3 && (
-                  <div className={styles.dropdownContent}>
-                    Dolor <strong>almesit amet</strong>, consectetur adipiscing
-                    elit, sed doesn&apos;t eiusmod tempor incididunt ut labore
-                    consectetur elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.
-                  </div>
-                )}
+                <div
+                  className={`${styles.dropdownContent} ${
+                    activeDropdown === 3 ? styles.open : ""
+                  }`}
+                >
+                  Dolor <strong>almesit amet</strong>, consectetur adipiscing
+                  elit, sed doesn&apos;t eiusmod tempor incididunt ut labore
+                  consectetur elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua.
+                </div>
               </div>
             </div>
           </div>
